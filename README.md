@@ -1,2 +1,2 @@
 # parch
-Arch Linux Pantheon Desktop(Elementary OS) installer
+Arch Linux Pantheon Desktop(Elementary OS Destkop) installer
