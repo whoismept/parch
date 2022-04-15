@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apps=$(
-    git
+    git \
     xorg-server \
     lightdm \
     lightdm-pantheon-greeter \
