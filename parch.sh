@@ -64,8 +64,15 @@ apps=$(
 )
 
 sudo pacman -Syu --noconfirm
-echo "Installing packages..."
-sudo pacman -S ${apps[@]} --noconfirm
+case $apps in
+    "")
+        break
+        ;;
+esac
+
+clear
+sudo pacman -S $apps --noconfirm
+
 git clone https://aur.archlinux.org/switchboard-plug-pantheon-tweaks-git.git
 (cd switchboard-plug-pantheon-tweaks-git && makepkg -si)
 
