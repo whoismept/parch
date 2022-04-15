@@ -64,14 +64,9 @@ apps=$(
 )
 
 sudo pacman -Syu --noconfirm
-case $apps in
-    "")
-        break
-        ;;
-esac
-
-clear
-sudo pacman -S $apps --noconfirm
+for app in $apps; do
+    sudo pacman -S --noconfirm $app
+done
 
 git clone https://aur.archlinux.org/switchboard-plug-pantheon-tweaks-git.git
 (cd switchboard-plug-pantheon-tweaks-git && makepkg -si)
