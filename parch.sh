@@ -1,5 +1,4 @@
 #!/bin/bash
-
 apps=("git" "xorg-server" "lightdm" "lightdm-pantheon-greeter" "gala" "plank" "wingpanel" "pantheon-applications-menu"
     "pantheon-notifications" "pantheon-terminal" "switchboard" "switchboard-plug-a11y" "switchboard-plug-about"
     "switchboard-plug-applications" "switchboard-plug-bluetooth" "switchboard-plug-datetime" "switchboard-plug-desktop"
@@ -15,6 +14,7 @@ apps=("git" "xorg-server" "lightdm" "lightdm-pantheon-greeter" "gala" "plank" "w
 
 echo "Starting Arch Linux Pantheon Desktop installation..."
 sudo pacman -Syu --noconfirm
+echo "Installing packages..."
 for app in $apps; do
     sudo pacman -S --noconfirm $app
 done
@@ -23,6 +23,7 @@ git clone https://aur.archlinux.org/switchboard-plug-pantheon-tweaks-git.git
 (cd switchboard-plug-pantheon-tweaks-git && makepkg -si)
 
 echo "Staring configuration..."
+
 sudo echo "[Desktop Entry]
 Name=Plank
 Comment=Stupidly simple.
