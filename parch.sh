@@ -95,8 +95,9 @@ sudo pacman -S inter-font ttf-opensans ttf-roboto-mono --noconfirm
 gsettings set org.gnome.desktop.interface font-name 'Inter 9'
 gsettings set org.gnome.desktop.interface document-font-name 'Open Sans 10'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Roboto Mono 10'
+gsettings set net.launchpad.plank.docks.dock1 theme 'Gtk+'
 
-echo "Fixed fonts"
+echo "Fixed fonts and plank theme"
 
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/odin.jpg
 
