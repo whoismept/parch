@@ -14,10 +14,13 @@ apps=("git" "xorg-server" "lightdm" "lightdm-pantheon-greeter" "gala" "plank" "w
 
 echo "Starting Arch Linux Pantheon Desktop installation..."
 echo "Installing packages..."
-for app in $apps; do
-    echo "installing: "$app
-    sudo pacman -S --noconfirm $app
-done
+case $apps in
+    "")
+        break
+        ;;
+esac
+
+sudo pacman -S $apps --noconfirm
 
 git clone https://aur.archlinux.org/switchboard-plug-pantheon-tweaks-git.git
 (cd switchboard-plug-pantheon-tweaks-git && makepkg -si)
