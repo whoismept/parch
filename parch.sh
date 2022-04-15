@@ -63,9 +63,9 @@ apps=("xorg-server"
 echo "Starting Arch Linux Pantheon Desktop installation..."
 sudo pacman -Syu --noconfirm
 echo "Installing packages..."
-for app in $apps; do
-    sudo pacman -S $app --noconfirm 
-done
+
+sudo pacman -S ${apps[@]} --noconfirm 
+
 
 git clone https://aur.archlinux.org/switchboard-plug-pantheon-tweaks-git.git
 (cd switchboard-plug-pantheon-tweaks-git && makepkg -si)
