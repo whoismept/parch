@@ -13,9 +13,9 @@ apps=["git" "xorg-server" "lightdm" "lightdm-pantheon-greeter" "gala" "plank" "w
     "pantheon-shortcut-overlay" "pantheon-sideload"]
 
 echo "Starting Arch Linux Pantheon Desktop installation..."
+sudo pacman -Syu --noconfirm
 echo "Installing packages..."
 for app in $apps; do
-    echo "installing: $app"
     sudo pacman -S $app --noconfirm 
 done
 
