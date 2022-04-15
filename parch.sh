@@ -66,7 +66,6 @@ echo "Installing packages..."
 
 sudo pacman -S ${apps[@]} --noconfirm 
 
-
 git clone https://aur.archlinux.org/switchboard-plug-pantheon-tweaks-git.git
 (cd switchboard-plug-pantheon-tweaks-git && makepkg -si)
 
@@ -89,15 +88,20 @@ OnlyShowIn=Pantheon;
 " > plank.desktop
 
 sudo mv plank.desktop /etc/xdg/autostart/
+
 echo "Added plank to autostart"
+
 sudo pacman -S inter-font ttf-opensans ttf-roboto-mono --noconfirm
 gsettings set org.gnome.desktop.interface font-name 'Inter 9'
 gsettings set org.gnome.desktop.interface document-font-name 'Open Sans 10'
 gsettings set org.gnome.desktop.interface monospace-font-name 'Roboto Mono 10'
+
 echo "Fixed fonts"
-clear
+
 gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/odin.jpg
+
 echo "Changed default background"
+
 sudo sed -i -e '$aHidden=true' /usr/share/applications/bvnc.desktop
 sudo sed -i -e '$aHidden=true' /usr/share/applications/bssh.desktop
 sudo sed -i -e '$aHidden=true' /usr/share/applications/avahi-discover.desktop
@@ -106,9 +110,12 @@ sudo sed -i -e '$aHidden=true' /usr/share/applications/qvidcap.desktop
 sudo sed -i -e '$aHidden=true' /usr/share/applications/gda-browser-5.0.desktop
 sudo sed -i -e '$aHidden=true' /usr/share/applications/gda-control-center-5.0.desktop
 sudo sed -i -e '$aHidden=true' /usr/share/applications/plank.desktop
+
 echo "Hidden unnecessary applications"
+
 sudo sed -i '102i\greeter-session=io.elementary.greeter' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm
+
 echo "Configured LightDM and added to start"
 echo "Everything is done!"
 echo "Reboot to apply changes"
