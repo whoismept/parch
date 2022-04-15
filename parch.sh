@@ -1,5 +1,5 @@
 #!/bin/bash
-apps=["git" "xorg-server" "lightdm" "lightdm-pantheon-greeter" "gala" "plank" "wingpanel" "pantheon-applications-menu" \
+apps=["xorg-server" "lightdm" "lightdm-pantheon-greeter" "gala" "plank" "wingpanel" "pantheon-applications-menu" \
     "pantheon-notifications" "pantheon-terminal" "switchboard" "switchboard-plug-a11y" "switchboard-plug-about" \
     "switchboard-plug-applications" "switchboard-plug-bluetooth" "switchboard-plug-datetime" "switchboard-plug-desktop" \
     "switchboard-plug-display" "switchboard-plug-keyboard" "switchboard-plug-locale" "switchboard-plug-mouse-touchpad" \
