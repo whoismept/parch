@@ -13,6 +13,7 @@ apps=("git" "xorg-server" "lightdm" "lightdm-pantheon-greeter" "gala" "plank" "w
     "capnet-assist" "cerbere" "contractor" "granite" "pantheon-geoclue2-agent" "pantheon-onboarding" "pantheon-polkit-agent"
     "pantheon-shortcut-overlay" "pantheon-sideload")
 
+echo "Starting Arch Linux Pantheon Desktop installation..."
 sudo pacman -Syu --noconfirm
 for app in $apps; do
     sudo pacman -S --noconfirm $app
